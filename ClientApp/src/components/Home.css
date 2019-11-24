@@ -1,4 +1,9 @@
-﻿a {
+﻿@font-face {
+    font-family: lemonmilk;
+    src: url('../fonts/LemonMilk.woff');
+}
+
+a {
     color: #000000;
     text-decoration: none;
 }
@@ -33,7 +38,7 @@ a:hover {
 }
 
 .logo {
-    font-family: 'EB Garamond', serif;
+    font-family: lemonmilk;
     font-size: 65px;
     line-height: 1.2em;
     text-transform: none;
@@ -111,6 +116,33 @@ li {
     color: #1c1c1c;
 }
 
+.info-div-top {
+    padding-top: 10%;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    line-height: 1.6em;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-style: normal;
+    text-align: center;
+    color: #1c1c1c;
+}
+
+.info-div-bottom {
+    padding-top: 2%;
+    padding-bottom: 5%;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    line-height: 1.6em;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-style: normal;
+    text-align: center;
+    color: #1c1c1c;
+}
+
 .page-divider-info {
     text-align: center;
     border-bottom: 1px solid #eee;
@@ -133,8 +165,8 @@ li {
 
 .footer-content-div {
     text-align: center;
-    font-family: 'EB Garamond', serif;
-    font-size: 20px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 17px;
     line-height: 1.2em;
     text-transform: none;
     text-decoration: none !important;

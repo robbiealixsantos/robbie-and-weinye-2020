@@ -22,9 +22,9 @@ export class Home extends Component {
                             <li class="page-collection">
                                 <a href="/wedding">Wedding</a>
                             </li>
-                            <li class="page-collection">
+                            {/*<li class="page-collection">
                                 <a href="/photos">Photos</a>
-                            </li>
+                            </li>*/}
                             {/*<li class="page-collection">
                                 <a href="/registry">Registry</a>
                             </li>*/}
@@ -42,20 +42,22 @@ export class Home extends Component {
                 </div>
 
                 <div id="info-div">
-                    <h3 class="info-div-top-bottom">Come celebrate our wedding</h3>
-                    <div class="page-divider-info"></div>
+                    <h3 class="info-div-top">Come celebrate our wedding</h3>
+                    {/*<div class="page-divider-info"></div>                    
                     <div class="info-div-main">
                         <h1><b>Robbie Santos</b></h1>
                         <h2>-<em>&</em>-</h2>
                         <h1><b>Weinye Chen</b></h1>
                     </div>
-                    <div class="page-divider-info"></div>
-                    <h3 class="info-div-top-bottom">Saturday, August 1, 2020</h3>
+                    <div class="page-divider-info"></div>*/}
+                    <h3 class="info-div-bottom">Saturday, August 1, 2020</h3>
                 </div>
 
 
                 <div class="footer-content-div">
-                    <div>Robbie and Weinye joyfully request the pleasure of your company as we speak our vows and join in marriage in the presence of family and friends. Photography by <a id="jane-link" target="_blank" href="https://www.hellojanelee.com/">Jane Lee</a>.</div>
+                    <div id="footer-content-div">Robbie and Weinye joyfully request the pleasure of your company as we speak our vows and join in marriage in the presence of family and friends.</div>
+                    <br/>
+                    <div id="jane-link-footer-div">Photography by <a id="jane-link" target="_blank" href="https://www.hellojanelee.com/">Jane Lee</a>.</div>
                 </div>
             </div>
         );
