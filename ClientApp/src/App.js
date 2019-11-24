@@ -4,6 +4,8 @@ import { Layout } from './components/Layout';
 import { Home } from './components/Home';
 import { FetchData } from './components/FetchData';
 import { Counter } from './components/Counter';
+import { Wedding } from './components/Wedding';
+import { RSVP } from './components/RSVP';
 
 
 export default class App extends Component {
@@ -15,6 +17,8 @@ export default class App extends Component {
         <Route exact path='/' component={Home} />
         <Route path='/counter' component={Counter} />
         <Route path='/fetch-data' component={FetchData} />
+        <Route path='/wedding' component={Wedding} />
+        <Route path='/rsvps' component={RSVP} />
       </Layout>
     );
   }
