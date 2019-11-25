@@ -1,31 +1,61 @@
 import React, { Component } from 'react';
+import Moment from 'moment';
 
 export class Counter extends Component {
-  static displayName = Counter.name;
+    static displayName = Counter.name;
 
-  constructor(props) {
-    super(props);
-    this.state = { currentCount: 0 };
-    this.incrementCounter = this.incrementCounter.bind(this);
-  }
+    constructor(props) {
+        super(props);
+        this.state = { RSVPs: [], loading: true };
 
-  incrementCounter() {
-    this.setState({
-      currentCount: this.state.currentCount + 1
-    });
-  }
+        fetch('api/RSVP/RSVPs', {
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                this.setState({ RSVPs: data, loading: false });
+            });
+    }
 
-  render() {
-    return (
-      <div>
-        <h1>Counter</h1>
+    static renderRSVPsTable(RSVPs) {
+        return (
+            <table className='table table-striped'>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Name</th>
+                        <th>RSVP Count</th>
+                        <th>Comment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {RSVPs.map(rsvp =>
+                        <tr key={rsvp.email}>
+                            <td>{Moment(rsvp.createdDate).format('MMM Do YY')}</td>
+                            <td>{rsvp.name}</td>
+                            <td>{rsvp.rsvpCount}</td>
+                            <td>{rsvp.comment}</td>
+                        </tr>
+                    )}
+                </tbody>
+            </table>
+        );
+    }
 
-        <p>This is a simple example of a React component.</p>
+    render() {
+        let contents = this.state.loading
+            ? <p><em>Loading...</em></p>
+            : Counter.renderRSVPsTable(this.state.RSVPs);
 
-        <p aria-live="polite">Current count: <strong>{this.state.currentCount}</strong></p>
-
-        <button className="btn btn-primary" onClick={this.incrementCounter}>Increment</button>
-      </div>
-    );
-  }
+        return (
+            <div>
+                <h1>RSVPs</h1>
+                {contents}
+                <a href="/">Home</a>
+            </div>
+        );
+    }
 }

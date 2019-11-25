@@ -27,7 +27,7 @@ export class Wedding extends Component {
                                 <a href="/registry">Registry</a>
                             </li>*/}
                             <li class="page-collection">
-                                <a href="/rsvps">RSVP</a>
+                                <a href="/rsvp">RSVP</a>
                             </li>
                         </ul>
                         <div class="page-divider"></div>

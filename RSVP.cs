@@ -13,7 +13,11 @@ namespace robbie_and_weinye_2020
 
         public string Email { get; set; }
 
-        public int RSVPCount { get; set; }
+        public string PhoneNumber { get; set; }
+
+        public int RSVPCountAdult { get; set; }
+
+        public int RSVPCountChildren { get; set; }
 
         public string Comment { get; set; }
     }

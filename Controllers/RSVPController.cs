@@ -36,7 +36,8 @@ namespace robbie_and_weinye_2020.Controllers
                 CreatedDate = DateTime.Now.AddDays(index),
                 Name = "Test Testerson",
                 Email = "test@test.com",
-                RSVPCount = 1,
+                RSVPCountAdult = 1,
+                RSVPCountChildren = 1,
                 Comment = Comments[rng.Next(Comments.Length)]
             })
             .ToArray();
